@@ -1,1 +1,1 @@
-# ARISE---AI
+# ARISE - AI
