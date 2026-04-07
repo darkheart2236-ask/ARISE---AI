@@ -2,17 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ARISE AI - Gemini UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARISE AI - World-Class AI Chat & Images</title>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/black-chancery" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <div class="app">
+        <!-- Sidebar (Gemini Style) -->
         <div class="sidebar">
-            <h1>ARISE AI</h1>
-            <button class="sidebar-btn">New Chat</button>
-        </div>
-        <div class="chat-container" id="chatbox">
+            <div class="logo">
+                <h1>✨ ARISE</h1>
             </div>
+            <button id="newChat" class="sidebar-btn">+ New Chat</button>
+            <div class="spacer"></div>
+            <div class="settings">
+                <details>
+                    <summary>⚙️ Settings</summary>
+                    <label class="theme-toggle">
+                        <input type="checkbox" id="themeToggle">
+                        Dark Mode
+                    </label>
+                </details>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main">
+            <div id="chatContainer" class="chat-container">
+                <!-- Chat messages will be injected here -->
+            </div>
+            
+            <div class="input-area">
+                <div class="input-row">
+                    <textarea id="messageInput" placeholder="Message ARISE... (Type /imagine for images)"></textarea>
+                    <button id="sendBtn">Send</button>
+                </div>
+                <div class="image-gen">
+                    <input type="text" id="imagePrompt" placeholder="✨ Generate image: 'a cyberpunk city'">
+                    <button id="generateImage">Generate</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="/static/script.js"></script>
 </body>
 </html>
